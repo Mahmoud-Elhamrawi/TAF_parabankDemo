@@ -1,0 +1,16 @@
+{
+  "successfulRegister": [
+    {
+      "firstName": "mahmoud1",
+      "lastName": "rashad",
+      "address": "cairon-asercirt",
+      "city": "cairo",
+      "state": "elharm",
+      "zipcode": "121212",
+      "phone": "0666666666",
+      "ssn": "25",
+      "userName": "mahmoudelhamrawi10",
+      "password": "123456"
+    }
+  ]
+}
