@@ -26,13 +26,13 @@ public class TC01_RegisterTest extends testBase{
     }
 
     @Test(priority = 1)
-    public void RegisterActive()
+    public void goToResgisterPage()
     {
         homePage = new HomePage(driver);
         homePage.goTORegisterPage();
     }
 
-    @Test( dataProvider = "jsonData", priority = 2,dependsOnMethods = "RegisterActive")
+    @Test( dataProvider = "jsonData", priority = 2,dependsOnMethods = "goToResgisterPage")
     public void validRegister(String data){
         String[] users = data.split(",");
         registerPage = new P01_RegisterPage(driver );
