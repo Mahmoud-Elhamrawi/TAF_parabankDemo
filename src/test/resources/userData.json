@@ -2,14 +2,14 @@
   "successfulRegister": [
     {
       "firstName": "mohamed",
-      "lastName": "mahmoud",
+      "lastName": "ahmed",
       "address": "raml",
       "city": "cairo",
       "state": "elharm",
       "zipcode": "121212",
       "phone": "0666666666",
       "ssn": "25",
-      "userName": "mohamed1",
+      "userName": "mohamed22",
       "password": "123456"
     }
   ]
