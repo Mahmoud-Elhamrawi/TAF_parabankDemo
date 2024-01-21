@@ -4,6 +4,7 @@ import Data.readJsonData;
 import Page.P02_logOutPage;
 import Page.P03_LoginPage;
 import Page.P04_OpenAccountPage;
+import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -11,12 +12,13 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.time.Duration;
 
 public class TC03_OpenNewAccountChecking extends testBase{
 
-    public static  String  accNumchecking ;
+    public String  accNumchecking ;
     P04_OpenAccountPage openAccountPage ;
      P02_logOutPage logOutPage ;
     P03_LoginPage loginPage ;
@@ -30,7 +32,7 @@ public class TC03_OpenNewAccountChecking extends testBase{
 
 
     @Test(dataProvider = "jsonData")
-    public void createNewAccountChecking(String data) throws InterruptedException {
+    public void createNewAccountChecking(String data) throws InterruptedException, IOException {
         //login
         String[] users = data.split(",");
         loginPage = new P03_LoginPage(driver);
@@ -59,6 +61,16 @@ public class TC03_OpenNewAccountChecking extends testBase{
         //take account number
         accNumchecking = openAccountPage.numberAcc().getText();
         System.out.println(accNumchecking);
+
+
+        //create json
+        JSONObject jo =new JSONObject();
+        jo.put("checkNum",accNumchecking) ;
+        FileWriter file = new FileWriter("./src\\test\\resources\\accountNumCheck.json",true);
+        file.write(jo.toJSONString());
+        file.close();
+
+
 
         //logout
         logOutPage = new P02_logOutPage(driver);

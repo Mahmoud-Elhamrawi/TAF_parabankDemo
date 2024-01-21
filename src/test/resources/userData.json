@@ -1,7 +1,7 @@
 {
   "successfulRegister": [
     {
-      "firstName": "mohamed",
+      "firstName": "morad11",
       "lastName": "ahmed",
       "address": "raml",
       "city": "cairo",
@@ -9,7 +9,7 @@
       "zipcode": "121212",
       "phone": "0666666666",
       "ssn": "25",
-      "userName": "mohamed22",
+      "userName": "morad11",
       "password": "123456"
     }
   ]

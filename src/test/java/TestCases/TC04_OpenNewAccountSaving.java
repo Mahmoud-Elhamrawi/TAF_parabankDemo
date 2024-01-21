@@ -1,8 +1,10 @@
 package TestCases;
 
 import Data.readJsonData;
+import Page.P02_logOutPage;
 import Page.P03_LoginPage;
 import Page.P04_OpenAccountPage;
+import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -11,17 +13,18 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.time.Duration;
 
 public class TC04_OpenNewAccountSaving extends testBase
 {
 
-
+    P02_logOutPage logOutPage ;
     P04_OpenAccountPage openAccountPage ;
 
     P03_LoginPage loginPage ;
-    public static  String  accNumSaving ;
+    public static  String  accNumSaving="" ;
 
     Data.readJsonData readJsonData ;
     @DataProvider(name = "jsonData")
@@ -32,7 +35,7 @@ public class TC04_OpenNewAccountSaving extends testBase
 
 
     @Test(dataProvider = "jsonData")
-    public void createNewAccountSaving(String data) throws InterruptedException {
+    public void createNewAccountSaving(String data) throws InterruptedException, IOException {
         //login
         String[] users = data.split(",");
         loginPage = new P03_LoginPage(driver);
@@ -57,15 +60,34 @@ public class TC04_OpenNewAccountSaving extends testBase
 
 
         openAccountPage.createAccount();
-        Thread.sleep(3000);
+        Thread.sleep(4000);
         System.out.println(openAccountPage.assertAccountOpened().getText());
 //        wait.until(ExpectedConditions.visibilityOf(openAccountPage.assertOnShowRes()));
         Assert.assertEquals("Account Opened!" , openAccountPage.assertAccountOpened().getText());
-        Thread.sleep(3000);
+        Thread.sleep(4000);
 
         //take account number
         accNumSaving = openAccountPage.numberAcc().getText();
         System.out.println(accNumSaving);
+
+
+        //create json
+        JSONObject jo =new JSONObject();
+        jo.put("saveNum",accNumSaving) ;
+        FileWriter file = new FileWriter("./src\\test\\resources\\accountNumSaving.json",false);
+        file.write(jo.toJSONString());
+        file.close();
+
+
+
+        //logout
+        logOutPage = new P02_logOutPage(driver);
+        logOutPage.goTologOut();
+        Assert.assertEquals("https://parabank.parasoft.com/parabank/index.htm?ConnType=JDBC",driver.getCurrentUrl());
+
+
+
+
 
 
     }
