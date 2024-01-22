@@ -1,6 +1,6 @@
 package TestCases;
 
-import Data.readJsonData;
+import Data.readDataUser;
 import Page.P02_logOutPage;
 import Page.P03_LoginPage;
 import Page.P04_OpenAccountPage;
@@ -26,11 +26,11 @@ public class TC04_OpenNewAccountSaving extends testBase
     P03_LoginPage loginPage ;
     public static  String  accNumSaving="" ;
 
-    Data.readJsonData readJsonData ;
+    readDataUser readDataUser;
     @DataProvider(name = "jsonData")
     public Object[] testDataForRegister() throws IOException, ParseException {
-        readJsonData = new readJsonData();
-        return readJsonData.testDataForSuccessfulRegister();
+        readDataUser = new readDataUser();
+        return readDataUser.testDataForSuccessfulRegister();
     }
 
 

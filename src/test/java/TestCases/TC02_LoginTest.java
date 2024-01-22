@@ -1,10 +1,8 @@
 package TestCases;
 
-import Data.readJsonData;
-import Page.HomePage;
+import Data.readDataUser;
 import Page.P03_LoginPage;
 import org.json.simple.parser.ParseException;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -18,11 +16,11 @@ public class TC02_LoginTest extends testBase{
 
 
     P03_LoginPage loginPage ;
-    readJsonData  readJsonData ;
+    readDataUser readDataUser;
     @DataProvider(name = "jsonData")
     public Object[] testDataForRegister() throws IOException, ParseException {
-        readJsonData = new readJsonData();
-        return readJsonData.testDataForSuccessfulRegister();
+        readDataUser = new readDataUser();
+        return readDataUser.testDataForSuccessfulRegister();
     }
 
  @Test(dataProvider ="jsonData" )

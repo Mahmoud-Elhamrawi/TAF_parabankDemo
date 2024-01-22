@@ -1,6 +1,6 @@
 package TestCases;
 
-import Data.readJsonData;
+import Data.readDataUser;
 import Page.P02_logOutPage;
 import Page.P03_LoginPage;
 import Page.P04_OpenAccountPage;
@@ -23,11 +23,11 @@ public class TC03_OpenNewAccountChecking extends testBase{
      P02_logOutPage logOutPage ;
     P03_LoginPage loginPage ;
 
-    Data.readJsonData readJsonData ;
+    readDataUser readDataUser;
     @DataProvider(name = "jsonData")
     public Object[] testDataForRegister() throws IOException, ParseException {
-        readJsonData = new readJsonData();
-        return readJsonData.testDataForSuccessfulRegister();
+        readDataUser = new readDataUser();
+        return readDataUser.testDataForSuccessfulRegister();
     }
 
 
@@ -65,8 +65,8 @@ public class TC03_OpenNewAccountChecking extends testBase{
 
         //create json
         JSONObject jo =new JSONObject();
-        jo.put("checkNum",accNumchecking) ;
-        FileWriter file = new FileWriter("./src\\test\\resources\\accountNumCheck.json",true);
+        jo.put("Account",accNumchecking) ;
+        FileWriter file = new FileWriter("./src\\test\\resources\\accountNumCheck.json");
         file.write(jo.toJSONString());
         file.close();
 

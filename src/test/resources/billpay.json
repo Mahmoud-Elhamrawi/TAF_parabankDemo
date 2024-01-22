@@ -1,0 +1,17 @@
+{
+  "successfulBillPay": [
+    {
+      "payeeName": "electricity",
+      "address": "ramel",
+      "city": "cairo",
+      "state": "elharm",
+      "zipcode": "121212",
+      "phone": "0666666666",
+       "Account": "23556",
+      "Amount": "200"
+    }
+  ]
+}
+
+
+

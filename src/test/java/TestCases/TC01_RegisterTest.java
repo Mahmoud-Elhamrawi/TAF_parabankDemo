@@ -1,6 +1,6 @@
 package TestCases;
 
-import Data.readJsonData;
+import Data.readDataUser;
 import Page.HomePage;
 import Page.P01_RegisterPage;
 import Page.P02_logOutPage;
@@ -17,12 +17,12 @@ public class TC01_RegisterTest extends testBase{
     P01_RegisterPage registerPage ;
 
     P02_logOutPage logOutPage ;
-    readJsonData  readJsonData ;
+    readDataUser readDataUser;
 
     @DataProvider(name = "jsonData")
     public Object[] testDataForRegister() throws IOException, ParseException {
-        readJsonData = new readJsonData();
-        return readJsonData.testDataForSuccessfulRegister();
+        readDataUser = new readDataUser();
+        return readDataUser.testDataForSuccessfulRegister();
     }
 
     @Test(priority = 1)

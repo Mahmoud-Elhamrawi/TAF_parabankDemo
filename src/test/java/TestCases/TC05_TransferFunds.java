@@ -1,6 +1,6 @@
 package TestCases;
 
-import Data.readJsonData;
+import Data.readDataUser;
 import Page.*;
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -23,12 +23,12 @@ public class TC05_TransferFunds extends testBase{
     P05_transferFundPage transferFundPage ;
     P06_accountOverViewPage accountOverViewPage ;
 
-    Data.readJsonData readJsonData ;
+    readDataUser readDataUser;
 
     @DataProvider(name = "jsonData")
     public Object[] testDataForRegister() throws IOException, ParseException {
-        readJsonData = new readJsonData();
-        return readJsonData.testDataForSuccessfulRegister();
+        readDataUser = new readDataUser();
+        return readDataUser.testDataForSuccessfulRegister();
     }
     @Test(dataProvider = "jsonData",priority = 1)
     public void login(String data) throws InterruptedException {
@@ -52,8 +52,9 @@ public class TC05_TransferFunds extends testBase{
     }
 
 
-    @Test(priority = 3,dependsOnMethods = "transferPage")
+    @Test(priority = 3)
     public void transferChecking() throws InterruptedException {
+        this.transferPage();
         Thread.sleep(4000);
         Select sel = new Select(transferFundPage.transToCheckAcc());
         sel.selectByIndex(1);///checking nmber
@@ -81,8 +82,9 @@ public class TC05_TransferFunds extends testBase{
 
 
 
-    @Test(priority = 4,dependsOnMethods = "transferChecking",alwaysRun = false)
+    @Test(priority = 4)
     public void transferSaving() throws InterruptedException {
+        this.transferPage();
         Thread.sleep(4000);
         Select sel = new Select(transferFundPage.transToCheckAcc());
         sel.selectByIndex(2);///checking nmber
@@ -101,7 +103,7 @@ public class TC05_TransferFunds extends testBase{
 
         //assert on avaliable amount
         Thread.sleep(3000);
-        Assert.assertEquals( "$100.00",transferFundPage.assertValue().getText());
+        Assert.assertEquals( "$200.00",transferFundPage.assertValue().getText());
         System.out.println(transferFundPage.assertValue().getText());
 
     }

@@ -9,6 +9,7 @@
            <class name="TestCases.TC03_OpenNewAccountChecking"></class>
            <class name="TestCases.TC04_OpenNewAccountSaving"></class>
            <class name="TestCases.TC05_TransferFunds"></class>
+           <class name="TestCases.TC06_BillpayTest"></class>
 
 
        </classes>
