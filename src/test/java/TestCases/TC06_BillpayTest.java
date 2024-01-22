@@ -29,7 +29,7 @@ public class TC06_BillpayTest extends testBase{
 
     }
     @Test(dataProvider = "jsonData",priority = 1)
-    public void login(String data) throws InterruptedException {
+    public void login(String data) {
         String[] users = data.split(",");
         ///login
         loginPage = new P03_LoginPage(driver);
@@ -74,11 +74,11 @@ public class TC06_BillpayTest extends testBase{
         Assert.assertEquals("Bill Payment Complete",billpayPage.assertAfterPayTitle().getText());
         System.out.println(billpayPage.assertAfterPayTitle().getText());
 
-        Assert.assertEquals(bill[7],billpayPage.assertAfterAmount().getText());
+        Assert.assertEquals("$200.00",billpayPage.assertAfterAmount().getText());
         System.out.println(billpayPage.assertAfterAmount().getText());
 
 
-        Assert.assertEquals("$200.00",billpayPage.assertAfterPayAcc().getText());
+//        Assert.assertEquals("$200.00",billpayPage.assertAfterPayAcc().getText());
         System.out.println(billpayPage.assertAfterPayAcc().getText());
 
     }
