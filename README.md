@@ -13,13 +13,13 @@
 ⇨CMD: MVN command </br>
 </ul>
 
-<h3>Cover functions :</h3>
+<h3>Cover functions :</h3></br>
 <ul>
-  - Register
-  - Login
-  - Open a new account checking
-  - Open a new account  saving 
-  - Transfer funds
-  - Bill Payment
+  - Register</br>
+  - Login</br>
+  - Open a new account checking</br>
+  - Open a new account  saving </br>
+  - Transfer funds</br>
+  - Bill Payment</br>
 </ul>
 
