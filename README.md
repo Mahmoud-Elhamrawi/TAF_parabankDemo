@@ -1,5 +1,5 @@
 <h1>📌⚡parabank Demo using Selenium 4 </h1>
-<h2> It is demo for only testing purposes  simulate working  of bank</h2>
+<h2> It is a demo for only testing purposes  to simulate the working  of the bank</h2>
 <h3>Tools and technology : </h3>
 
 <ul>
@@ -14,7 +14,12 @@
 </ul>
 
 <h3>Cover functions :</h3>
--register
--login
--open a new account 
-- transfer funds
+<ul>
+  - Register
+  - Login
+  - Open a new account checking
+  - Open a new account  saving 
+  - Transfer funds
+  - Bill Payment
+</ul>
+
