@@ -25,41 +25,85 @@ td,th {border:1px solid #009;padding:.25em .5em}
 <body>
 <table cellspacing="0" cellpadding="0" class="testOverview">
 <tr><th>Test</th><th>Methods<br/>Passed</th><th>Scenarios<br/>Passed</th><th># skipped</th><th># failed</th><th>Total<br/>Time</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em"><a href="#t1">regressionTest</a></td><td class="numi">5</td><td class="numi">5</td><td class="numi">0</td><td class="numi">0</td><td class="numi">74.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t1">regressionTest</a></td><td class="numi">14</td><td class="numi">14</td><td class="numi">0</td><td class="numi">0</td><td class="numi">256.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
 <tr id="t1"><th colspan="5">regressionTest &#8212; passed</th></tr>
-<tr class="passedodd"><td>TestCases.TC01_RegisterTest</td><td><a href="#m1"><b>validRegister</b>  </a></td><td class="numi">1</td><td>1704783423948</td><td class="numi">2115</td></tr>
-<tr class="passedeven"><td>TestCases.TC03_OpenNewAccountTest</td><td><a href="#m2"><b>createNewAccount</b>  </a></td><td class="numi">1</td><td>1704783462996</td><td class="numi">9783</td></tr>
-<tr class="passedodd"><td>TestCases.TC01_RegisterTest</td><td><a href="#m3"><b>RegisterActive</b>  </a></td><td class="numi">1</td><td>1704783422863</td><td class="numi">1035</td></tr>
-<tr class="passedeven"><td>TestCases.TC02_LoginTest</td><td><a href="#m4"><b>validLogin</b>  </a></td><td class="numi">1</td><td>1704783439882</td><td class="numi">2152</td></tr>
-<tr class="passedodd"><td>TestCases.TC01_RegisterTest</td><td><a href="#m5"><b>logOut</b>  </a></td><td class="numi">1</td><td>1704783426066</td><td class="numi">717</td></tr>
+<tr class="passedodd"><td rowspan="2">TestCases.TC01_RegisterTest</td><td><a href="#m1"><b>goToResgisterPage</b>  </a></td><td class="numi">1</td><td>1706008824028</td><td class="numi">2363</td></tr><tr class="passedodd"><td><a href="#m2"><b>validRegister</b>  </a></td><td class="numi">1</td><td>1706008826543</td><td class="numi">3967</td></tr>
+<tr class="passedeven"><td rowspan="2">TestCases.TC05_TransferFunds</td><td><a href="#m3"><b>transferChecking</b>  </a></td><td class="numi">1</td><td>1706008941287</td><td class="numi">13714</td></tr><tr class="passedeven"><td><a href="#m4"><b>transferSaving</b>  </a></td><td class="numi">1</td><td>1706008955003</td><td class="numi">14805</td></tr>
+<tr class="passedodd"><td>TestCases.TC03_OpenNewAccountChecking</td><td><a href="#m5"><b>createNewAccountChecking</b>  </a></td><td class="numi">1</td><td>1706008877631</td><td class="numi">13532</td></tr>
+<tr class="passedeven"><td>TestCases.TC06_BillpayTest</td><td><a href="#m6"><b>login</b>  </a></td><td class="numi">1</td><td>1706008982793</td><td class="numi">2407</td></tr>
+<tr class="passedodd"><td>TestCases.TC05_TransferFunds</td><td><a href="#m7"><b>transferPage</b>  </a></td><td class="numi">1</td><td>1706008940792</td><td class="numi">493</td></tr>
+<tr class="passedeven"><td>TestCases.TC04_OpenNewAccountSaving</td><td><a href="#m8"><b>createNewAccountSaving</b>  </a></td><td class="numi">1</td><td>1706008907602</td><td class="numi">18140</td></tr>
+<tr class="passedodd"><td>TestCases.TC02_LoginTest</td><td><a href="#m9"><b>validLogin</b>  </a></td><td class="numi">1</td><td>1706008858501</td><td class="numi">6312</td></tr>
+<tr class="passedeven"><td>TestCases.TC05_TransferFunds</td><td><a href="#m10"><b>login</b>  </a></td><td class="numi">1</td><td>1706008938875</td><td class="numi">1912</td></tr>
+<tr class="passedodd"><td>TestCases.TC06_BillpayTest</td><td><a href="#m11"><b>goToBillPayPage</b>  </a></td><td class="numi">1</td><td>1706008985202</td><td class="numi">585</td></tr>
+<tr class="passedeven"><td>TestCases.TC01_RegisterTest</td><td><a href="#m12"><b>logOut</b>  </a></td><td class="numi">1</td><td>1706008830514</td><td class="numi">864</td></tr>
+<tr class="passedodd"><td rowspan="2">TestCases.TC06_BillpayTest</td><td><a href="#m13"><b>paymentProcess</b>  </a></td><td class="numi">1</td><td>1706008985837</td><td class="numi">1899</td></tr><tr class="passedodd"><td><a href="#m14"><b>logOut</b>  </a></td><td class="numi">1</td><td>1706008987742</td><td class="numi">804</td></tr>
 </table>
 <h1>regressionTest</h1>
-<h2 id="m1">TestCases.TC01_RegisterTest:RegisterActive</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">TestCases.TC02_LoginTest:validLogin</h2>
+<h2 id="m1">TestCases.TC03_OpenNewAccountChecking:createNewAccountChecking</h2>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr class="param"><th>Parameter #1</th></tr>
-<tr class="param stripe"><td>mahmoud1,rashad,cairon-asercirt,cairoelharm,121212,0666666666,25,mahmoudelhamrawi10,123456</td>
+<tr class="param stripe"><td>moshaa,ahmed,raml,cairoelharm,121212,0666666666,25,moshaa,123456</td>
 </tr>
 </table>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">TestCases.TC01_RegisterTest:validRegister</h2>
+<h2 id="m2">TestCases.TC06_BillpayTest:login</h2>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr class="param"><th>Parameter #1</th></tr>
-<tr class="param stripe"><td>mahmoud1,rashad,cairon-asercirt,cairoelharm,121212,0666666666,25,mahmoudelhamrawi10,123456</td>
+<tr class="param stripe"><td>moshaa,ahmed,raml,cairoelharm,121212,0666666666,25,moshaa,123456</td>
 </tr>
 </table>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">TestCases.TC03_OpenNewAccountTest:createNewAccount</h2>
+<h2 id="m3">TestCases.TC01_RegisterTest:goToResgisterPage</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">TestCases.TC05_TransferFunds:transferPage</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">TestCases.TC04_OpenNewAccountSaving:createNewAccountSaving</h2>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr class="param"><th>Parameter #1</th></tr>
-<tr class="param stripe"><td>mahmoud1,rashad,cairon-asercirt,cairoelharm,121212,0666666666,25,mahmoudelhamrawi10,123456</td>
+<tr class="param stripe"><td>moshaa,ahmed,raml,cairoelharm,121212,0666666666,25,moshaa,123456</td>
 </tr>
 </table>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">TestCases.TC01_RegisterTest:logOut</h2>
+<h2 id="m6">TestCases.TC02_LoginTest:validLogin</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>moshaa,ahmed,raml,cairoelharm,121212,0666666666,25,moshaa,123456</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">TestCases.TC05_TransferFunds:login</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>moshaa,ahmed,raml,cairoelharm,121212,0666666666,25,moshaa,123456</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">TestCases.TC01_RegisterTest:validRegister</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>moshaa,ahmed,raml,cairoelharm,121212,0666666666,25,moshaa,123456</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">TestCases.TC06_BillpayTest:goToBillPayPage</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">TestCases.TC05_TransferFunds:transferChecking</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m11">TestCases.TC01_RegisterTest:logOut</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m12">TestCases.TC05_TransferFunds:transferSaving</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m13">TestCases.TC06_BillpayTest:paymentProcess</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>electricity,ramel,cairo,elharm,121212,0666666666,23556,200</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m14">TestCases.TC06_BillpayTest:logOut</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

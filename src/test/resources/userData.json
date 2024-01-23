@@ -2,7 +2,7 @@
 {
   "successfulRegister": [
     {
-      "firstName": "morad15",
+      "firstName": "testerBank2",
       "lastName": "ahmed",
       "address": "raml",
       "city": "cairo",
@@ -10,7 +10,7 @@
       "zipcode": "121212",
       "phone": "0666666666",
       "ssn": "25",
-      "userName": "morad15",
+      "userName": "testerBank2",
       "password": "123456"
     }
   ]

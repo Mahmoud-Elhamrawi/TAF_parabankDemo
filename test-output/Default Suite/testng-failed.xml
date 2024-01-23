@@ -3,14 +3,16 @@
 <suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="TAF_parabankDemo(failed)">
     <classes>
-      <class name="TestCases.TC01_RegisterTest">
+      <class name="TestCases.TC06_BillpayTest">
         <methods>
-          <include name="validRegister" invocation-numbers="1 2 3 4"/>
+          <include name="paymentProcess" invocation-numbers="0"/>
+          <include name="login"/>
           <include name="cleanUp"/>
-          <include name="takingScreenShot"/>
+          <include name="goToBillPayPage"/>
           <include name="openingBrowser"/>
+          <include name="takingScreenShot"/>
         </methods>
-      </class> <!-- TestCases.TC01_RegisterTest -->
+      </class> <!-- TestCases.TC06_BillpayTest -->
     </classes>
   </test> <!-- TAF_parabankDemo(failed) -->
 </suite> <!-- Failed suite [Default Suite] -->
